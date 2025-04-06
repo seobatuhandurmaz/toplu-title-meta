@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import os
 
 app = Flask(__name__)
+# Sadece https://www.batuhandurmaz.com'dan gelen isteklere izin ver
 CORS(app, resources={r"/*": {"origins": "https://www.batuhandurmaz.com"}})
 
 @app.route('/get-meta', methods=['POST'])
